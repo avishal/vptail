@@ -6,6 +6,7 @@ use Yii;
 use common\models\TestQuestions;
 use common\models\TestQuestionsSearch;
 use yii\web\Controller;
+use yii\web\UploadedFile;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
@@ -15,6 +16,8 @@ use yii\filters\AccessControl;
  */
 class TestQuestionsController extends Controller
 {
+
+    public $classlogo_uploadpath = 'uploads/images/testquestionsimages/';
     /**
      * @inheritdoc
      */
@@ -75,8 +78,18 @@ class TestQuestionsController extends Controller
     {
         $model = new TestQuestions();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post())) {
+            $modelimageFile = UploadedFile::getInstance($model, 'imageFile');
+            if($modelimageFile)
+            {
+                $logoname = $modelimageFile->baseName . '.' . $modelimageFile->extension;
+                $model->image_url = $logoname;
+                $modelimageFile->saveAs($this->classlogo_uploadpath. $logoname);
+            }
+            if ($model->load(Yii::$app->request->post()) && $model->save()) {
+
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -95,8 +108,20 @@ class TestQuestionsController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
-        } else {
+            $modelimageFile = UploadedFile::getInstance($model, 'imageFile');
+
+            if($modelimageFile)
+            {
+                $logoname = $modelimageFile->baseName . '.' . $modelimageFile->extension;
+                $model->image_url = $logoname;
+                $fileuploaded = $modelimageFile->saveAs($this->classlogo_uploadpath. $logoname);
+            }
+
+            if ($model->load(Yii::$app->request->post()) && $model->save()) {
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
+        }
+         else {
             return $this->render('update', [
                 'model' => $model,
             ]);

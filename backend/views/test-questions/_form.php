@@ -20,6 +20,8 @@ use common\models\TblTest;
 
     <?= $form->field($model, 'question')->textarea(['rows' => 6]) ?>
 
+    <?= $form->field($model, 'imageFile')->fileInput() ?>
+
     <?= $form->field($model, 'first_option')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'second_option')->textInput(['maxlength' => true]) ?>

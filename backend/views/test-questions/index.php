@@ -27,17 +27,20 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
+
+            // 'id',
             'testid',
-            //'question:ntext',
             [
-              'attribute' => 'question',
-              'format' =>'html',
-              'value'=>function($model)
-              {
-                return '<span width:"100px">'.$model->question.'</span>';
+              'attribute' => 'image_url',
+              'format' =>'raw',
+              'value'=>function($data) { 
+                if($data->image_url != null)
+                return Html::img("uploads/images/testquestionsimages/".$data->image_url,['alt'=>'myImage','width'=>'70']);
+                else
+                  return "";
               }
             ],
+            'question:ntext',
             'first_option',
             'second_option',
             // 'third_option',

@@ -10,6 +10,7 @@ use Yii;
  * @property integer $id
  * @property integer $testid
  * @property string $question
+ * @property string $image_url
  * @property string $first_option
  * @property string $second_option
  * @property string $third_option
@@ -26,6 +27,11 @@ use Yii;
  */
 class TestQuestions extends \yii\db\ActiveRecord
 {
+
+    public $imageFile;
+    public $uploadpath = 'uploads/';
+    public $logo_uploadpath = 'images/testquestionsimages/';
+
     /**
      * @inheritdoc
      */
@@ -42,10 +48,11 @@ class TestQuestions extends \yii\db\ActiveRecord
         return [
             [['testid', 'status'], 'integer'],
             [['question', 'first_option', 'second_option', 'answer', 'solution'], 'required'],
-            [['question', 'solution'], 'string'],
+            [['question', 'solution','image_url'], 'string'],
             [['created', 'updated'], 'safe'],
             [['first_option', 'second_option', 'third_option', 'fourth_option', 'fifth_option', 'sixth_option', 'answer'], 'string', 'max' => 50],
             [['testid'], 'exist', 'skipOnError' => true, 'targetClass' => TblTest::className(), 'targetAttribute' => ['testid' => 'id']],
+            [['imageFile'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg'],
         ];
     }
 
@@ -58,6 +65,7 @@ class TestQuestions extends \yii\db\ActiveRecord
             'id' => 'ID',
             'testid' => 'Test no',
             'question' => 'Question',
+            'image_url' => 'Image',
             'first_option' => 'First Option',
             'second_option' => 'Second Option',
             'third_option' => 'Third Option',
@@ -80,6 +88,14 @@ class TestQuestions extends \yii\db\ActiveRecord
         return $this->hasOne(TblTest::className(), ['id' => 'testid']);
     }
     
+    public function getImageurl()
+    {
+        if($this->logo)
+            return \Yii::$app->request->BaseUrl.'/'.$this->uploadpath.$this->logo_uploadpath.$this->logo;
+        else
+            return "";
+    }
+
     public function beforeSave($insert)
     {
         if($this->isNewRecord)

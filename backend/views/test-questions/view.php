@@ -5,7 +5,7 @@ use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\TestQuestions */
-
+$classlogo_uploadpath = 'uploads/images/testquestionsimages/';
 $this->title = $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Test Questions', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
@@ -30,7 +30,13 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'id',
             'testid',
-            'question:ntext',
+            "attribute"=>'question:ntext',
+            [
+              'attribute' => 'image_url',
+              'format' =>'raw',
+              'value'=>function($data) { return 
+                Html::img("uploads/images/testquestionsimages/".$data->image_url,['alt'=>'myImage','width'=>'70']); },
+            ],
             'first_option',
             'second_option',
             'third_option',
