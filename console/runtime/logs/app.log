@@ -1,0 +1,628 @@
+2016-10-17 16:52:11 [-][-][-][error][yii\console\Exception] exception 'yii\console\Exception' with message 'Missing required arguments: name' in D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\console\Controller.php:157
+Stack trace:
+#0 D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\base\InlineAction.php(49): yii\console\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#2 D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\console\Controller.php(119): yii\base\Controller->runAction('create', Array)
+#3 D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\base\Module.php(454): yii\console\Controller->runAction('create', Array)
+#4 D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate/create', Array)
+#5 D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate/create', Array)
+#6 D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#7 D:\xampp\htdocs\yiiadvapp\yii(27): yii\base\Application->run()
+#8 {main}
+2016-10-17 16:52:11 [-][-][-][info][application] $_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Shree\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'SHREE-PC'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Shree'
+    'LOCALAPPDATA' => 'C:\\Users\\Shree\\AppData\\Local'
+    'LOGONSERVER' => '\\\\SHREE-PC'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Windows\\IsmFiles;C:\\Windows\\IsmFiles;C:\\Windows\\IsmFiles;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\Shree\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 60 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3c03'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\Shree\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\Shree\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'Shree-PC'
+    'USERNAME' => 'Shree'
+    'USERPROFILE' => 'C:\\Users\\Shree'
+    'windir' => 'C:\\Windows'
+    'YII_PATH' => 'D:\\xampp\\htdocs\\yiiadvapp\\'
+    'PHP_SELF' => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+    'SCRIPT_NAME' => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+    'SCRIPT_FILENAME' => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1476715931.5737
+    'REQUEST_TIME' => 1476715931
+    'argv' => [
+        0 => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+        1 => 'migrate/create'
+    ]
+    'argc' => 2
+]
+2016-10-17 16:54:58 [-][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected 'extends' (T_EXTENDS), expecting identifier (T_STRING) or namespace (T_NAMESPACE) or \\ (T_NS_SEPARATOR)' in D:\xampp\htdocs\yiiadvapp\console\migrations\m161017_145324_gallery.php:5
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-10-17 16:54:55 [-][-][-][info][application] $_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Shree\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'SHREE-PC'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Shree'
+    'LOCALAPPDATA' => 'C:\\Users\\Shree\\AppData\\Local'
+    'LOGONSERVER' => '\\\\SHREE-PC'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Windows\\IsmFiles;C:\\Windows\\IsmFiles;C:\\Windows\\IsmFiles;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\Shree\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 60 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3c03'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\Shree\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\Shree\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'Shree-PC'
+    'USERNAME' => 'Shree'
+    'USERPROFILE' => 'C:\\Users\\Shree'
+    'windir' => 'C:\\Windows'
+    'YII_PATH' => 'D:\\xampp\\htdocs\\yiiadvapp\\'
+    'PHP_SELF' => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+    'SCRIPT_NAME' => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+    'SCRIPT_FILENAME' => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1476716095.6911
+    'REQUEST_TIME' => 1476716095
+    'argv' => [
+        0 => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2016-10-17 16:55:02 [-][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected 'extends' (T_EXTENDS), expecting identifier (T_STRING) or namespace (T_NAMESPACE) or \\ (T_NS_SEPARATOR)' in D:\xampp\htdocs\yiiadvapp\console\migrations\m161017_145324_gallery.php:5
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-10-17 16:55:00 [-][-][-][info][application] $_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Shree\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'SHREE-PC'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Shree'
+    'LOCALAPPDATA' => 'C:\\Users\\Shree\\AppData\\Local'
+    'LOGONSERVER' => '\\\\SHREE-PC'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Windows\\IsmFiles;C:\\Windows\\IsmFiles;C:\\Windows\\IsmFiles;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\Shree\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 60 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3c03'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\Shree\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\Shree\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'Shree-PC'
+    'USERNAME' => 'Shree'
+    'USERPROFILE' => 'C:\\Users\\Shree'
+    'windir' => 'C:\\Windows'
+    'YII_PATH' => 'D:\\xampp\\htdocs\\yiiadvapp\\'
+    'PHP_SELF' => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+    'SCRIPT_NAME' => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+    'SCRIPT_FILENAME' => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1476716100.6404
+    'REQUEST_TIME' => 1476716100
+    'argv' => [
+        0 => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2016-10-17 16:55:40 [-][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'm140930_003227_gallery_manager' not found' in D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\console\controllers\MigrateController.php:170
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-10-17 16:55:37 [-][-][-][info][application] $_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Shree\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'SHREE-PC'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Shree'
+    'LOCALAPPDATA' => 'C:\\Users\\Shree\\AppData\\Local'
+    'LOGONSERVER' => '\\\\SHREE-PC'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Windows\\IsmFiles;C:\\Windows\\IsmFiles;C:\\Windows\\IsmFiles;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\Shree\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 60 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3c03'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\Shree\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\Shree\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'Shree-PC'
+    'USERNAME' => 'Shree'
+    'USERPROFILE' => 'C:\\Users\\Shree'
+    'windir' => 'C:\\Windows'
+    'YII_PATH' => 'D:\\xampp\\htdocs\\yiiadvapp\\'
+    'PHP_SELF' => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+    'SCRIPT_NAME' => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+    'SCRIPT_FILENAME' => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1476716137.9275
+    'REQUEST_TIME' => 1476716137
+    'argv' => [
+        0 => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2016-10-17 16:57:05 [-][-][-][error][yii\base\ErrorException:64] exception 'yii\base\ErrorException' with message 'yii\console\controllers\MigrateController::createMigration(): Failed opening required 'D:\xampp\htdocs\yiiadvapp\console/migrations\m130524_201442_init.php' (include_path='D:\xampp\php\PEAR')' in D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\console\controllers\MigrateController.php:168
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-10-17 16:56:56 [-][-][-][info][application] $_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Shree\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'SHREE-PC'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Shree'
+    'LOCALAPPDATA' => 'C:\\Users\\Shree\\AppData\\Local'
+    'LOGONSERVER' => '\\\\SHREE-PC'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Windows\\IsmFiles;C:\\Windows\\IsmFiles;C:\\Windows\\IsmFiles;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\Shree\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 60 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3c03'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\Shree\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\Shree\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'Shree-PC'
+    'USERNAME' => 'Shree'
+    'USERPROFILE' => 'C:\\Users\\Shree'
+    'windir' => 'C:\\Windows'
+    'YII_PATH' => 'D:\\xampp\\htdocs\\yiiadvapp\\'
+    'PHP_SELF' => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+    'SCRIPT_NAME' => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+    'SCRIPT_FILENAME' => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1476716216.568
+    'REQUEST_TIME' => 1476716216
+    'argv' => [
+        0 => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+        1 => 'migrate/redo'
+    ]
+    'argc' => 2
+]
+2016-10-17 16:57:11 [-][-][-][error][yii\base\ErrorException:64] exception 'yii\base\ErrorException' with message 'yii\console\controllers\MigrateController::createMigration(): Failed opening required 'D:\xampp\htdocs\yiiadvapp\console/migrations\m130524_201442_init.php' (include_path='D:\xampp\php\PEAR')' in D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\console\controllers\MigrateController.php:168
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-10-17 16:57:08 [-][-][-][info][application] $_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Shree\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'SHREE-PC'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Shree'
+    'LOCALAPPDATA' => 'C:\\Users\\Shree\\AppData\\Local'
+    'LOGONSERVER' => '\\\\SHREE-PC'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Windows\\IsmFiles;C:\\Windows\\IsmFiles;C:\\Windows\\IsmFiles;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\Shree\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 60 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3c03'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\Shree\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\Shree\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'Shree-PC'
+    'USERNAME' => 'Shree'
+    'USERPROFILE' => 'C:\\Users\\Shree'
+    'windir' => 'C:\\Windows'
+    'YII_PATH' => 'D:\\xampp\\htdocs\\yiiadvapp\\'
+    'PHP_SELF' => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+    'SCRIPT_NAME' => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+    'SCRIPT_FILENAME' => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1476716228.8647
+    'REQUEST_TIME' => 1476716228
+    'argv' => [
+        0 => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+        1 => 'migrate/redo'
+        2 => '4'
+    ]
+    'argc' => 3
+]
+2016-10-17 16:58:04 [-][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected 'extends' (T_EXTENDS), expecting identifier (T_STRING) or namespace (T_NAMESPACE) or \\ (T_NS_SEPARATOR)' in D:\xampp\htdocs\yiiadvapp\console\migrations\m161017_145324_gallery.php:5
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-10-17 16:58:00 [-][-][-][info][application] $_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Shree\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'SHREE-PC'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Shree'
+    'LOCALAPPDATA' => 'C:\\Users\\Shree\\AppData\\Local'
+    'LOGONSERVER' => '\\\\SHREE-PC'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Windows\\IsmFiles;C:\\Windows\\IsmFiles;C:\\Windows\\IsmFiles;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\Shree\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 60 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3c03'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\Shree\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\Shree\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'Shree-PC'
+    'USERNAME' => 'Shree'
+    'USERPROFILE' => 'C:\\Users\\Shree'
+    'windir' => 'C:\\Windows'
+    'YII_PATH' => 'D:\\xampp\\htdocs\\yiiadvapp\\'
+    'PHP_SELF' => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+    'SCRIPT_NAME' => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+    'SCRIPT_FILENAME' => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1476716280.4637
+    'REQUEST_TIME' => 1476716280
+    'argv' => [
+        0 => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2016-10-17 16:58:58 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1051 Unknown table 'yii2advanced.gallery_image'' in D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\db\Command.php:844
+Stack trace:
+#0 D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\db\Command.php(844): PDOStatement->execute()
+#1 D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\db\Migration.php(290): yii\db\Command->execute()
+#2 D:\xampp\htdocs\yiiadvapp\vendor\zxbodya\yii2-gallery-manager\migrations\m140930_003227_gallery_manager.php(29): yii\db\Migration->dropTable('{{%gallery_imag...')
+#3 D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(537): zxbodya\yii2\galleryManager\migrations\m140930_003227_gallery_manager->down()
+#4 D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(191): yii\console\controllers\BaseMigrateController->migrateDown('m161017_145324_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionDown(1)
+#6 D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#8 D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\console\Controller.php(119): yii\base\Controller->runAction('down', Array)
+#9 D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\base\Module.php(454): yii\console\Controller->runAction('down', Array)
+#10 D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate/down', Array)
+#11 D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate/down', Array)
+#12 D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 D:\xampp\htdocs\yiiadvapp\yii(27): yii\base\Application->run()
+#14 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S02]: Base table or view not found: 1051 Unknown table 'yii2advanced.gallery_image'
+The SQL being executed was: DROP TABLE `gallery_image`' in D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\db\Schema.php:633
+Stack trace:
+#0 D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\db\Command.php(854): yii\db\Schema->convertException(Object(PDOException), 'DROP TABLE `gal...')
+#1 D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\db\Migration.php(290): yii\db\Command->execute()
+#2 D:\xampp\htdocs\yiiadvapp\vendor\zxbodya\yii2-gallery-manager\migrations\m140930_003227_gallery_manager.php(29): yii\db\Migration->dropTable('{{%gallery_imag...')
+#3 D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(537): zxbodya\yii2\galleryManager\migrations\m140930_003227_gallery_manager->down()
+#4 D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(191): yii\console\controllers\BaseMigrateController->migrateDown('m161017_145324_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionDown(1)
+#6 D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#8 D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\console\Controller.php(119): yii\base\Controller->runAction('down', Array)
+#9 D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\base\Module.php(454): yii\console\Controller->runAction('down', Array)
+#10 D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate/down', Array)
+#11 D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate/down', Array)
+#12 D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 D:\xampp\htdocs\yiiadvapp\yii(27): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 42S02
+    [1] => 1051
+    [2] => Unknown table 'yii2advanced.gallery_image'
+)
+
+2016-10-17 16:58:56 [-][-][-][info][application] $_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Shree\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'SHREE-PC'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Shree'
+    'LOCALAPPDATA' => 'C:\\Users\\Shree\\AppData\\Local'
+    'LOGONSERVER' => '\\\\SHREE-PC'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Windows\\IsmFiles;C:\\Windows\\IsmFiles;C:\\Windows\\IsmFiles;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\Shree\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 60 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3c03'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\Shree\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\Shree\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'Shree-PC'
+    'USERNAME' => 'Shree'
+    'USERPROFILE' => 'C:\\Users\\Shree'
+    'windir' => 'C:\\Windows'
+    'YII_PATH' => 'D:\\xampp\\htdocs\\yiiadvapp\\'
+    'PHP_SELF' => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+    'SCRIPT_NAME' => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+    'SCRIPT_FILENAME' => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1476716336.6189
+    'REQUEST_TIME' => 1476716336
+    'argv' => [
+        0 => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+        1 => 'migrate/down'
+    ]
+    'argc' => 2
+]
+2016-10-18 07:09:19 [-][-][-][error][yii\console\Exception] exception 'yii\console\Exception' with message 'Unknown option: --migratePath' in D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\console\Controller.php:115
+Stack trace:
+#0 D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\base\Module.php(454): yii\console\Controller->runAction('', Array)
+#1 D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#2 D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#3 D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#4 D:\xampp\htdocs\yiiadvapp\yii(27): yii\base\Application->run()
+#5 {main}
+2016-10-18 07:09:19 [-][-][-][info][application] $_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Shree\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'SHREE-PC'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Shree'
+    'LOCALAPPDATA' => 'C:\\Users\\Shree\\AppData\\Local'
+    'LOGONSERVER' => '\\\\SHREE-PC'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Windows\\IsmFiles;C:\\Windows\\IsmFiles;C:\\Windows\\IsmFiles;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\Shree\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 60 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3c03'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\Shree\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\Shree\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'Shree-PC'
+    'USERNAME' => 'Shree'
+    'USERPROFILE' => 'C:\\Users\\Shree'
+    'windir' => 'C:\\Windows'
+    'YII_PATH' => 'D:\\xampp\\htdocs\\yiiadvapp\\'
+    'PHP_SELF' => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+    'SCRIPT_NAME' => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+    'SCRIPT_FILENAME' => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1476767359.5575
+    'REQUEST_TIME' => 1476767359
+    'argv' => [
+        0 => 'D:\\xampp\\htdocs\\yiiadvapp\\yii'
+        1 => 'migrate'
+        2 => '--migratePath=@vendor/onmotion/yii2-gallery/migrations'
+    ]
+    'argc' => 3
+]
+2017-02-03 07:47:36 [-][-][-][error][yii\console\Exception] exception 'yii\console\Exception' with message 'Unknown option: --migratePath' in D:\xampp\htdocs\elearn\vendor\yiisoft\yii2\console\Controller.php:115
+Stack trace:
+#0 D:\xampp\htdocs\elearn\vendor\yiisoft\yii2\base\Module.php(454): yii\console\Controller->runAction('up', Array)
+#1 D:\xampp\htdocs\elearn\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate/up', Array)
+#2 D:\xampp\htdocs\elearn\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate/up', Array)
+#3 D:\xampp\htdocs\elearn\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#4 D:\xampp\htdocs\elearn\yii(27): yii\base\Application->run()
+#5 {main}
+2017-02-03 07:47:36 [-][-][-][info][application] $_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Shree\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'SHREE-PC'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Shree'
+    'LOCALAPPDATA' => 'C:\\Users\\Shree\\AppData\\Local'
+    'LOGONSERVER' => '\\\\SHREE-PC'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Windows\\IsmFiles;C:\\Windows\\IsmFiles;C:\\Windows\\IsmFiles;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Java\\jre1.8.0_31\\bin;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\nodejs\\;C:\\Users\\Shree\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Shree\\AppData\\Roaming\\npm'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 60 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3c03'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\Shree\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\Shree\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'Shree-PC'
+    'USERNAME' => 'Shree'
+    'USERPROFILE' => 'C:\\Users\\Shree'
+    'windir' => 'C:\\Windows'
+    'YII_PATH' => 'D:\\xampp\\htdocs\\elearn\\'
+    'PHP_SELF' => 'D:\\xampp\\htdocs\\elearn\\yii'
+    'SCRIPT_NAME' => 'D:\\xampp\\htdocs\\elearn\\yii'
+    'SCRIPT_FILENAME' => 'D:\\xampp\\htdocs\\elearn\\yii'
+    'PATH_TRANSLATED' => 'D:\\xampp\\htdocs\\elearn\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1486104456.1453
+    'REQUEST_TIME' => 1486104456
+    'argv' => [
+        0 => 'D:\\xampp\\htdocs\\elearn\\yii'
+        1 => 'migrate/up'
+        2 => '--migratePath=@vendor/dektrium/yii2-user/migrations'
+    ]
+    'argc' => 3
+]

@@ -1,0 +1,127 @@
+2016-11-21 08:48:25 [::1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'include_once(analyticstracking.php): failed to open stream: No such file or directory' in D:\xampp\htdocs\yiiadvapp\frontend\views\site\index.php:1
+Stack trace:
+#0 D:\xampp\htdocs\yiiadvapp\frontend\views\site\index.php(1): yii\base\ErrorHandler->handleError(2, 'include_once(an...', 'D:\\xampp\\htdocs...', 1, Array)
+#1 D:\xampp\htdocs\yiiadvapp\frontend\views\site\index.php(1): include_once()
+#2 D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\base\View.php(325): require('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\\xampp\\htdocs...', Array)
+#4 D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\\xampp\\htdocs...', Array, Object(frontend\controllers\SiteController))
+#5 D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('index', Array, Object(frontend\controllers\SiteController))
+#6 D:\xampp\htdocs\yiiadvapp\frontend\controllers\SiteController.php(75): yii\base\Controller->render('index')
+#7 [internal function]: frontend\controllers\SiteController->actionIndex()
+#8 D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#10 D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('', Array)
+#11 D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('', Array)
+#12 D:\xampp\htdocs\yiiadvapp\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\xampp\htdocs\yiiadvapp\frontend\web\index.php(18): yii\base\Application->run()
+#14 {main}
+2016-11-21 08:48:25 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf-backend' => 'f7282c8e4844aef40524b007c6b1610404667d1eab8e1117fe5ef4d0dffde246a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"61ZvJgoOw-nh4bvCYCk6ZYTiLf4MnTlu\";}'
+    '_csrf-frontend' => '4fea42e397a4f4145ab44acd017edff30d75e9abe9fa12ce6375dba4dea4b96ca:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"s01r_CrKq83NjAbfbuQdFd1-JZzMOz_Q\";}'
+    'advanced-frontend' => '3p4frt3bdl648okdfbaidp0pi1'
+    '_csrf-api' => '3f9fd69cee3c881b06bd31c2a3cfa0bc951feb25636a990719a750242db54a97a:2:{i:0;s:9:\"_csrf-api\";i:1;s:32:\"RL1k_Y4Sq7-oqskjq19nakBBRPChTr-f\";}'
+    'advanced-api' => 'k4e5arge8d0bc2qgafn859p281'
+    '_csrf' => '09a143edfe3f67353d9449dae7a2a2b980e54d4a482ea2295ed3b323db2c4df6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5PeWORWRfzsZMhBB3EerBkut98Fq4iuZ\";}'
+    'advanced-backend' => '8uch9nsi052ldebaceg7qim9s0'
+    'treeForm_tree-hi' => ''
+    'JSESSIONID' => '2440a6ae3d330915da666fb91e18'
+    '_identity-backend' => 'e22d85daf8d38ffd38311d8eb522ed9f7b8225c740ee3a05153212a5af266771a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"ofayMtRcq8uc9NWkMsNFiX9Yt0P8NuM4\",2592000]\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/yiiadvapp/frontend/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,hi;q=0.6,mr;q=0.4'
+    'HTTP_COOKIE' => '_csrf-backend=f7282c8e4844aef40524b007c6b1610404667d1eab8e1117fe5ef4d0dffde246a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%2261ZvJgoOw-nh4bvCYCk6ZYTiLf4MnTlu%22%3B%7D; _csrf-frontend=4fea42e397a4f4145ab44acd017edff30d75e9abe9fa12ce6375dba4dea4b96ca%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22s01r_CrKq83NjAbfbuQdFd1-JZzMOz_Q%22%3B%7D; advanced-frontend=3p4frt3bdl648okdfbaidp0pi1; _csrf-api=3f9fd69cee3c881b06bd31c2a3cfa0bc951feb25636a990719a750242db54a97a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_csrf-api%22%3Bi%3A1%3Bs%3A32%3A%22RL1k_Y4Sq7-oqskjq19nakBBRPChTr-f%22%3B%7D; advanced-api=k4e5arge8d0bc2qgafn859p281; _csrf=09a143edfe3f67353d9449dae7a2a2b980e54d4a482ea2295ed3b323db2c4df6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%225PeWORWRfzsZMhBB3EerBkut98Fq4iuZ%22%3B%7D; advanced-backend=8uch9nsi052ldebaceg7qim9s0; treeForm_tree-hi=; JSESSIONID=2440a6ae3d330915da666fb91e18; _identity-backend=e22d85daf8d38ffd38311d8eb522ed9f7b8225c740ee3a05153212a5af266771a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22ofayMtRcq8uc9NWkMsNFiX9Yt0P8NuM4%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Windows\\IsmFiles;C:\\Windows\\IsmFiles;C:\\Windows\\IsmFiles;D:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Java\\jre1.8.0_31\\bin;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\Shree\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/5.5.38 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/5.5.38'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/xampp/htdocs/yiiadvapp/frontend/web/index.php'
+    'REMOTE_PORT' => '54771'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yiiadvapp/frontend/web/'
+    'SCRIPT_NAME' => '/yiiadvapp/frontend/web/index.php'
+    'PHP_SELF' => '/yiiadvapp/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1479714505.37
+    'REQUEST_TIME' => 1479714505
+]
+2017-09-15 14:03:56 [192.168.1.9][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.1.9
+    in C:\xampp\htdocs\elearn\frontend\views\layouts\main.php:79
+    in C:\xampp\htdocs\elearn\frontend\controllers\SiteController.php:75
+2017-09-15 14:03:56 [192.168.1.9][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.1.9
+2017-09-15 14:03:54 [192.168.1.9][-][-][info][application] $_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => '192.168.1.3'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-IN,en-GB;q=0.8,en-US;q=0.6,en;q=0.4'
+    'PATH' => 'C:\\Program Files\\Java\\jdk1.8.0_121\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;D:\\sdk;C:\\Program Files\\Java\\jdk1.8.0_121;C:\\Program Files\\nodejs\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\TortoiseGit\\bin;C:\\Python36-32;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\Vishal\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Vishal\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Vishal\\AppData\\Roaming\\npm;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at 192.168.1.3 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => '192.168.1.3'
+    'SERVER_ADDR' => '192.168.1.3'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.1.9'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/elearn/frontend/web/index.php'
+    'REMOTE_PORT' => '60896'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/elearn/frontend/web/'
+    'SCRIPT_NAME' => '/elearn/frontend/web/index.php'
+    'PHP_SELF' => '/elearn/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1505477034.069
+    'REQUEST_TIME' => 1505477034
+]
