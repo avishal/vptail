@@ -15,5 +15,27 @@ class ClassesController extends ActiveController
 
 	public $subjlogo_uploadpath = 'uploads/images/classlogos/';
 	public $modelClass = 'common\models\Classes';
+
+	public function actionGetAllClasses()
+	{
+
+		try {
+			$models = Classes::find()->where(['status'=>10])->all();
+			$data=[];
+			foreach ($models as $model) {
+					$d = [];
+				foreach ($model as $key => $value) {
+					$d[$key] = $value;
+				}
+				$data[] = $d;
+			}
+			return ['result' =>'success', 'data' => $data];
+
+		}
+		catch (Exception $ex) {
+			throw new \yii\web\HttpException(500, 'Internal server error');
+		}
+	}
+
 }
 ?>

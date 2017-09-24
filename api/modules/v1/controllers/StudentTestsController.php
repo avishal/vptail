@@ -21,7 +21,8 @@ class StudentTestsController extends ActiveController
 			try {
 				$testid = $_POST['testid'];
 				$studentid = $_POST['studentid'];
-				$testModel = StudentTests::findAll(['testid'=>$testid,'studentid'=>$studentid]);
+				$testModel = StudentTests::find()->where(['testid'=>$testid,'studentid'=>$studentid])->orderBy("created desc, questionid asc")->limit(10)->all();
+				// echo "<pre>"; print_r($testModel);exit;
 				$allTestResultdata = [];
 				$data = [];	
 				$data['correctcount'] = 0;

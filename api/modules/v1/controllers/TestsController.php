@@ -21,7 +21,6 @@ class TestsController extends ActiveController
 
 				$chapterid = $_POST['chapterid'];
 				$studentid = $_POST['studentid'];
-				
 				$models = TblTest::findAll(['chapterid'=>$chapterid]);
 				//echo "<pre>"; print_r($model);exit;
 				if($models)
@@ -39,7 +38,6 @@ class TestsController extends ActiveController
 							$d["testappeared"] = false;
 
 						$data[] = $d;
-
 					}
 					return ['result'=>'success','data'=>$data];
 				}
@@ -55,6 +53,5 @@ class TestsController extends ActiveController
         	throw new \yii\web\HttpException(400, 'invalid request');
     	}
 	}
-
 }
 ?>

@@ -11,6 +11,7 @@ use common\models\TestQuestions;
 
 class TestQuestionsController extends ActiveController
 {
+	public $subjlogo_uploadpath = 'uploads/images/testquestionsimages/';
 	public $modelClass = 'common\models\TestQuestions';
 
 	public function actionGetTestQuestions()
@@ -25,7 +26,22 @@ class TestQuestionsController extends ActiveController
 				
 				if($models)
 				{
-					return ['result'=>'success','data'=>$models];
+					$data=[];
+					foreach ($models as $model) {
+						$d = [];
+						foreach ($model as $key => $value) {
+							if($key == 'image_url')
+								if($value != null)
+									$d[$key] = Yii::$app->urlManagerBackend->baseUrl.'/'.$this->subjlogo_uploadpath.$value;
+								else
+									$d[$key] = "no image";
+							else
+								$d[$key] = $value;
+						}
+						$data[] = $d;
+					}
+
+					return ['result'=>'success','data'=>$data];
 				}
 				else
 					return ['result'=>'fail','reason'=> 'no test questions found'];

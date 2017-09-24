@@ -33,6 +33,50 @@ class StudentSubscriptionsController extends ActiveController
     	}
 	}*/
 
+	public function actionPayuHash()
+	{
+		if (!empty($_POST)) {
+			
+			$key=$_POST["key"];
+
+			$salt="s6j2r8XAaX";
+			// $salt="UTX1I0nGyt";
+			/*$txnId=$_POST["txnid"];
+			$amount=$_POST["amount"];
+			$productName=$_POST["productInfo"];
+			$firstName=$_POST["firstName"];
+			$email=$_POST["email"];
+			$udf1=$_POST["udf1"];
+			$udf2=$_POST["udf2"];
+			$udf3=$_POST["udf3"];
+			$udf4=$_POST["udf4"];
+			$udf5=$_POST["udf5"];*/
+
+			// $payhash_str = $key . '|' . checkNull($txnId) . '|' .checkNull($amount)  . '|' .checkNull($productName)  . '|' . checkNull($firstName) . '|' . checkNull($email) . '|' . checkNull($udf1) . '|' . checkNull($udf2) . '|' . checkNull($udf3) . '|' . checkNull($udf4) . '|' . checkNull($udf5) . '|' . $salt;
+			$payhash_str = $key . $salt;
+
+			$hash = strtolower(hash('sha512', $payhash_str));
+			$arr['result'] = $hash;
+			$arr['status']=0;
+			$arr['errorCode']=null;
+			$arr['responseCode']=null;
+			$output=$arr;
+
+			return $output;
+		}
+		else {
+        	throw new \yii\web\HttpException(400, 'invalid request');
+    	}
+	}
+
+	private function checkNull($value) {
+            if ($value == null) {
+                  return '';
+            } else {
+                  return $value;
+            }
+      }
+
 	public function actionCreateNewStudentSubscription()
 	{
 		//$today = date('Y-m-d H:i:s',time());

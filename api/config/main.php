@@ -61,6 +61,24 @@ return [
             'rules' => [
                 [
                     'class' => 'yii\rest\UrlRule', 
+                    'controller' => 'v1/tailor-users',
+                    'extraPatterns' => [
+                        'POST registration' => 'registration', 
+                        'POST forgot-password' => 'forgot-password', 
+                        'POST login' => 'login', 
+                    ]
+                ],
+                [
+                    'class' => 'yii\rest\UrlRule', 
+                    'controller' => 'v1/customers',
+                    'extraPatterns' => [
+                        'POST registration' => 'registration', 
+                        'POST forgot-password' => 'forgot-password', 
+                        'POST login' => 'login', 
+                    ]
+                ],
+                [
+                    'class' => 'yii\rest\UrlRule', 
                     'controller' => 'v1/fcm-devices',
                     'extraPatterns' => [
                         'POST register-device' => 'create-new-device-registration', 
@@ -102,6 +120,7 @@ return [
                     ],*/
                     'extraPatterns' => [
                         'POST add-new-stud-sub' => 'create-new-student-subscription', 
+                        'POST payu-hash' => 'payu-hash', 
                     ]
                 ],
                 [
@@ -111,6 +130,7 @@ return [
                         '{id}' => '<id:\\w+>'
                     ],*/
                     'extraPatterns' => [
+                        'GET get-all-classes' => '', 
                     ]
                 ],
                 [

@@ -56,9 +56,9 @@ class VideosController extends ActiveController
 				$studentid = $_POST['studentid'];
 				$alldata =[];
 
-				$studentModel = Students::findOne(['id'=>$studentid]);
+				$studentModel = Students::find()->where(['id'=>$studentid])->one();
 
-				$videoModel = Videos::findAll(['chapterid' => $chapterid]);
+				$videoModel = Videos::find()->where(['chapterid' => $chapterid])->orderBy("isfree asc")->all();
 				$isSubscribed = false;
 				$isSubscriptionExpired = false;
 
@@ -134,13 +134,14 @@ class VideosController extends ActiveController
 					//echo "4. isSubscribed: ".$isSubscribed." isSubscriptionExpired: ".$isSubscriptionExpired."<br>";
 					//echo "no videos for this chapter ".$chapterid;
 				}
-				//echo "5:: isSubscribed: ".$isSubscribed." isSubscriptionExpired: ".$isSubscriptionExpired."<br>";
-				//exit;
+				// if($isSubscribed== false && $isSubscriptionExpired == false)
+				// echo "5:: isSubscribed: false isSubscriptionExpired: $isSubscriptionExpired.<br>";
+				// exit;
 				if (count($videoModel) <= 0) {
 					return ['result' =>'fail', 'reason' => "No entries found"];
 				} else {
 					$alldata = [];
-					if($isSubscribed=== true && $isSubscriptionExpired === false)
+					if($isSubscribed === true && $isSubscriptionExpired === false)
 					{
 						
 						foreach ($videoModel as $vmodel) {
@@ -156,9 +157,9 @@ class VideosController extends ActiveController
 							$alldata[] = $d;
 						}
 					}
-					else if(($isSubscribed=== true && $isSubscriptionExpired === true) || ($isSubscribed === false || $isSubscriptionExpired === false))
+					else if(($isSubscribed === true && $isSubscriptionExpired === true) || ($isSubscribed === false || $isSubscriptionExpired === false))
 					{
-						
+						// echo "<pre>"; print_r($videoModel);exit;
 						foreach ($videoModel as $vmodel) {
 							$d = [];
 							$locked = false;
@@ -171,10 +172,11 @@ class VideosController extends ActiveController
 								}
 								$d[$key] = $value;
 							}
-							if(!$locked)
+							$alldata[] = $d;
+							/*if(!$locked)
 								$alldata[0] = $d;
 							else
-								$alldata[] = $d;
+								$alldata[] = $d;*/
 						}
 					}
 

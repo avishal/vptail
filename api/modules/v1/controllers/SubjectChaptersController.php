@@ -112,14 +112,14 @@ class SubjectChaptersController extends ActiveController
 				// ]);
 
 				$testquery = TblTest::find();
-				$testquery->where(['=','subjid', $subjid]);
+				$testquery->where(['subjid' => $subjid,'status'=> 10]);
 
 				$providertest = new ActiveDataProvider([
 				    'query' => $testquery,
 				]);
 
 				$videoquery = Videos::find();
-				$videoquery->where(['=','subjid', $subjid]);
+				$videoquery->where(['subjid' => $subjid,'status'=> 10]);
 
 				$providervid = new ActiveDataProvider([
 				    'query' => $videoquery,

@@ -33,7 +33,7 @@ class StudentsController extends ActiveController
 		if (!empty($_POST)) {
 			try {
 
-				$mobile = $_POST['username'];
+				$mobile = $_POST['mobile'];
 				$password = $_POST['password'];
 				
 				$model = Students::findOne(['mobile'=>$mobile,'password' => md5($password)]);
@@ -343,6 +343,7 @@ class StudentsController extends ActiveController
 				$gender = $_POST['gender'];
 				$dob = $_POST['dob'];
 				$city = $_POST['city'];
+				$course = $_POST['classid'];
 
 				$fullnamearray = explode(" ", $fullname);
 
@@ -365,7 +366,7 @@ class StudentsController extends ActiveController
 					$firstname = $fullnamearray[0];
 				}
 
-				$studentModel = Students::find($id)->one();
+				$studentModel = Students::findOne($id);
 				if($firstname !="")
 					$studentModel->firstname = ucfirst(trim($firstname));
 				if($middlename !="")
@@ -375,12 +376,13 @@ class StudentsController extends ActiveController
 				//$studentModel->email = $email;
 				//$studentModel->mobile = $mobileno;
 				$studentModel->gender = $gender;
-				//$studentModel->course = $course;
+				$studentModel->classid = $course;
 				$studentModel->city = ucfirst(trim($city));
 
 				$studentModel->dateofbirth = date("Y-m-d",strtotime($dob));
 				if($studentModel->beforeSave(false) && $studentModel->save())
 				{
+					// echo "<pre>"; print_r($studentModel);exit;
 					return ['result'=>'success','data'=>$studentModel];
 				}
 				else
@@ -388,8 +390,6 @@ class StudentsController extends ActiveController
 					return ['result'=>'fail','reason'=> 'unable to save profile', 'techreason'=>$studentModel->getErrors()];
 				}
 
-				//$studentModel->password = md5(trim($password));
-				//$studentModel->classid = $course;
 			}
 			catch (Exception $ex) {
 				throw new \yii\web\HttpException(500, 'Internal server error');
