@@ -75,6 +75,8 @@ return [
                         'POST registration' => 'registration', 
                         'POST forgot-password' => 'forgot-password', 
                         'POST login' => 'login', 
+                        'POST search' => 'search-customers', 
+                        'POST get-my-customers' => 'get-tailor-customers', 
                     ]
                 ],
                 [

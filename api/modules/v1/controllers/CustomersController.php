@@ -6,6 +6,7 @@ use Yii;
 use yii\rest\ActiveController;
 use yii\data\ActiveDataProvider;
 use common\models\Customers;
+use common\models\TailorCustomers;
 
 
 class CustomersController extends ActiveController
@@ -290,6 +291,80 @@ class CustomersController extends ActiveController
         	throw new \yii\web\HttpException(400, 'invalid request');
     	}
 	}
+
+
+	public function actionSearchCustomers()
+	{
+		if (!empty($_POST)) {
+			try {
+
+				$searchterm = $_POST['searchterm'];
+				
+				$model = Customers::find()->where(['like','firstname','%'.$searchterm])->orWhere(['like','lastname','%'.$searchterm])->orWhere(['like','email','%'.$searchterm])->orWhere(['like','mobile',$searchterm])->all();
+				//echo "<pre>"; print_r($model);exit;
+				if($model)
+				{
+					//$data = $model;
+					foreach ($model as $key => $value) {
+						$data[$key] = $value;
+					}
+
+					return ['result'=>'success','data'=>$data];
+				}
+				else
+					return ['result'=>'success','data'=>[]];
+
+			}
+			catch (Exception $ex) {
+				throw new \yii\web\HttpException(500, 'Internal server error');
+			}
+		}
+		else {
+        	throw new \yii\web\HttpException(400, 'invalid request');
+    	}
+	}
+
+	public function actionGetTailorCustomers()
+	{
+		if (!empty($_POST)) {
+			try {
+
+				$tailorid = $_POST['tailorid'];
+				
+				$model = TailorCustomers::find()->where(['tailorid'=>$tailorid])->all();
+				// echo "<pre>"; print_r($model);exit;
+				if($model)
+				{
+					//$data = $model;
+					// foreach ($model as $key => $value) {
+					foreach ($model as $m) {
+						$d = [];
+
+						$d['id'] = $m->customer->id;
+						$d['firstname'] = $m->customer->firstname;
+						$d['lastname'] = $m->customer->lastname;
+						$d['email'] = $m->customer->email;
+						$d['mobile'] = $m->customer->mobile;
+						$d['address'] = $m->customer->address;
+						$data[]=$d;
+					}
+
+
+					return ['result'=>'success','data'=>$data];
+				}
+				else
+					return ['result'=>'success','data'=>[]];
+
+			}
+			catch (Exception $ex) {
+				throw new \yii\web\HttpException(500, 'Internal server error');
+			}
+		}
+		else {
+        	throw new \yii\web\HttpException(400, 'invalid request');
+    	}
+	}
+
 
 	public function actionUpdateUserById()
 	{

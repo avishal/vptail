@@ -15,6 +15,7 @@ class TailorUsersController extends ActiveController
 
 	public function actionLogin()
 	{
+		$_POST = json_decode(file_get_contents('php://input'), true);
 		if (!empty($_POST)) {
 			try {
 
@@ -45,7 +46,79 @@ class TailorUsersController extends ActiveController
 
 	public function actionRegistration()
 	{
-		// echo "<pre>"; print_r($_POST);exit;
+			$_POST = json_decode(file_get_contents('php://input'), true);
+			// print_r($_POST);exit;
+		if (!empty($_POST)) {
+    		try {
+				$name = $_POST['name'];
+				$email = $_POST['email'];
+				$mobileno = $_POST['mobile'];
+				$passwordplain = $_POST['password'];
+				// $country_code = "IN";
+				// if(isset($_POST['country_code']))
+					// $country_code = $_POST['country_code'];
+				$modelEmail = TailorUsers::findOne(['email' => $email]);
+				if(!$modelEmail)
+				{
+					$fullname = $name;
+					$fullnamearray = explode(" ", $fullname);
+
+					$firstname="";
+					$middlename="";
+					$lastname="";
+					if(count($fullnamearray) == 3 || count($fullnamearray) > 3 )
+					{
+						$firstname = $fullnamearray[0];
+						$middlename = $fullnamearray[1];
+						$lastname = $fullnamearray[2];
+					}
+					else if(count($fullnamearray) == 2)
+					{
+						$firstname = $fullnamearray[0];
+						$lastname = $fullnamearray[1];
+					}
+					else if(count($fullnamearray) == 1)
+					{
+						$firstname = $fullnamearray[0];
+					}
+
+					$tailorUserModel = new TailorUsers();
+					$tailorUserModel->firstname = ucfirst(trim($firstname));
+					$tailorUserModel->lastname = ucfirst(trim($lastname));
+					$tailorUserModel->email = $email;
+					$tailorUserModel->mobile = $mobileno;
+					$tailorUserModel->password = md5(trim($passwordplain));
+					$tailorUserModel->status = 10;
+					$tailorUserModel->shop_name = "NA";
+					$tailorUserModel->created = $tailorUserModel->updated= time();
+
+					if ($tailorUserModel->save())
+					{	
+						return ['result' =>'success', 'data' => $tailorUserModel];
+					}
+					else
+					{
+						return ['result' =>'fail','reason'=>'Something went wrong' ,'reason_tech' => $tailorUserModel->getErrors()];
+					}
+					
+				}
+				else
+				{
+					return ['result' =>'fail', 'reason' => "Email already registered"];
+				}
+			}
+			catch (Exception $ex) {
+				throw new \yii\web\HttpException(500, 'Internal server error');
+			}
+    	}
+    	else {
+        	throw new \yii\web\HttpException(400, 'invalid request');
+    	}
+	}
+
+	public function actionFromAppRegister()
+	{
+			$_POST = json_decode(file_get_contents('php://input'), true);
 		if (!empty($_POST)) {
     		try {
 				$name = $_POST['name'];
