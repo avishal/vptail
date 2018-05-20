@@ -66,6 +66,17 @@ return [
                         'POST registration' => 'registration', 
                         'POST forgot-password' => 'forgot-password', 
                         'POST login' => 'login', 
+                        'POST get-order-by-order-id' => 'get-order-by-order-id', 
+                        'POST get-orders-by-customer-id' => 'get-orders-by-customer-id', 
+                        'POST get-orders-by-tailor-id' => 'get-orders-by-tailor-id', 
+                        'POST delete-customer' => 'delete-customer', 
+                        'POST delete-worker' => 'delete-worker', 
+                        'POST update-tailor' => 'update-tailor', 
+                        'POST forgot-password' => 'forgot-password', 
+                        'POST change-password' => 'update-password', 
+                        'POST get-tailor-details' => 'get-user-by-id', 
+                        'POST update-measurement-unit' => 'update-measurement-unit', 
+                        'POST worker-customers' => 'worker-customers', 
                     ]
                 ],
                 [
@@ -77,216 +88,33 @@ return [
                         'POST login' => 'login', 
                         'POST search' => 'search-customers', 
                         'POST get-my-customers' => 'get-tailor-customers', 
+                        'POST get-customer-measurement' => 'get-customer-measurements',
+                        'POST save-measurement' => 'save-customer-measurements',
+                        'POST get-customer' => 'get-user-by-id',
                     ]
                 ],
                 [
                     'class' => 'yii\rest\UrlRule', 
-                    'controller' => 'v1/fcm-devices',
+                    'controller' => 'v1/workers',
                     'extraPatterns' => [
-                        'POST register-device' => 'create-new-device-registration', 
-                    ]
-                ],
-                [
-                    'class' => 'yii\rest\UrlRule', 
-                    'controller' => 'v1/tests',
-                    'extraPatterns' => [
-                        'POST get-chapters-test' => 'get-chapters-test', 
-                    ]
-                ],
-                [
-                    'class' => 'yii\rest\UrlRule', 
-                    'controller' => 'v1/student-tests',
-                    /*'tokens' => [
-                        '{id}' => '<id:\\w+>'
-                    ],*/
-                    'extraPatterns' => [
-                        'POST add-student-test' => 'save-test-results', 
-                        'POST get-student-test-analysis' => 'get-test-results-analysis',
-                        'POST get-student-test-result' => 'test-results', 
-                    ]
-                ],[
-                    'class' => 'yii\rest\UrlRule', 
-                    'controller' => 'v1/test-questions',
-                    /*'tokens' => [
-                        '{id}' => '<id:\\w+>'
-                    ],*/
-                    'extraPatterns' => [
-                        'POST get-questions' => 'get-test-questions',
-                    ]
-                ],
-                [
-                    'class' => 'yii\rest\UrlRule', 
-                    'controller' => 'v1/student-subscriptions',
-                    /*'tokens' => [
-                        '{id}' => '<id:\\w+>'
-                    ],*/
-                    'extraPatterns' => [
-                        'POST add-new-stud-sub' => 'create-new-student-subscription', 
-                        'POST payu-hash' => 'payu-hash', 
-                    ]
-                ],
-                [
-                    'class' => 'yii\rest\UrlRule', 
-                    'controller' => 'v1/classes',
-                    /*'tokens' => [
-                        '{id}' => '<id:\\w+>'
-                    ],*/
-                    'extraPatterns' => [
-                        'GET get-all-classes' => '', 
-                    ]
-                ],
-                [
-                    'class' => 'yii\rest\UrlRule', 
-                    'controller' => 'v1/subscription-plans',
-                    /*'tokens' => [
-                        '{id}' => '<id:\\w+>'
-                    ],*/
-                    'extraPatterns' => [
-                        'POST class-subscriptions'=>'class-subscriptions'
-                    ]
-                ],
-                [
-                    'class' => 'yii\rest\UrlRule', 
-                    'controller' => 'v1/sms-codes',
-                    /*'tokens' => [
-                        '{id}' => '<id:\\w+>'
-                    ],*/
-                    'extraPatterns' => [
-                        'GET get-code' => 'get-student-code', 
-                        'POST add-new-mobile' => 'add-new-mobile', 
-                        'POST verify' => 'verify-code', 
-                        
-                    ]
-                ],
-                [
-                    'class' => 'yii\rest\UrlRule', 
-                    'controller' => 'v1/videos',
-                    /*'tokens' => [
-                        '{id}' => '<id:\\w+>'
-                    ],*/
-                    'extraPatterns' => [
-                        'POST get-chapter-videos' => 'get-chapter-videos', 
-                    ]
-                ],
-                [
-                    'class' => 'yii\rest\UrlRule', 
-                    'controller' => 'v1/subject-chapters',
-                    /*'tokens' => [
-                        '{id}' => '<id:\\w+>'
-                    ],*/
-                    'extraPatterns' => [
-                        'POST get-subjects' => 'get-course-subjects', 
-                    ]
-                ],
-                [
-                    'class' => 'yii\rest\UrlRule', 
-                    'controller' => 'v1/students',
-                    'extraPatterns' => [
-                        'POST student-registration' => 'student-registration', 
-                        'POST student-login' => 'login', 
+                        'POST registration' => 'registration', 
                         'POST forgot-password' => 'forgot-password', 
-                        'POST new-password' => 'set-password', 
-                        'POST get-student' => 'get-student-by-id', 
-                        'POST update-student-profile' => 'update-student', 
-                        'POST update-student-password' => 'update-password', 
+                        'POST login' => 'login', 
+                        'POST search' => 'search-customers', 
+                        'POST get-my-worker' => 'get-tailor-workers', 
+                        'POST get-worker-measurement' => 'get-worker-measurements',
+                        'POST save-measurement' => 'save-worker-measurements',
+                        'POST get-worker' => 'get-user-by-id',
                     ]
-                    
                 ],
                 [
                     'class' => 'yii\rest\UrlRule', 
-                    'controller' => 'v1/subjects',
-                    'tokens' => [
-                        '{id}' => '<id:\\w+>'
-                    ],
+                    'controller' => 'v1/orders',
                     'extraPatterns' => [
-                        'POST get-student-class-subjects' => 'get-student-class-subjects',
-                    ]
-                ],
-                [
-                    'class' => 'yii\rest\UrlRule', 
-                    'controller' => 'v1/p-is',
-                    'tokens' => [
-                        '{id}' => '<id:\\w+>'
-                    ]
-                ],
-                [
-                    'class' => 'yii\rest\UrlRule', 
-                    'controller' => 'v1/links',
-                    'tokens' => [
-                        '{id}' => '<id:\\w+>'
-                    ]
-                ],
-                [
-                    'class' => 'yii\rest\UrlRule', 
-                    'controller' => 'v1/complaints',
-                    'tokens' => [
-                        '{id}' => '<id:\\w+>'
-                    ],
-                    'extraPatterns' => [
-                        'POST addcomp' => 'addcomplaint',
-                        'POST create-new' => 'create-new',
-                    ]
-                    
-                ],
-                [
-                    'class' => 'yii\rest\UrlRule', 
-                    'controller' => 'v1/suggestions',
-                    'tokens' => [
-                        '{id}' => '<id:\\w+>'
-                    ],
-                    'extraPatterns' => [
-                        'POST create-new' => 'create-new',
-                    ]
-                ],
-                [
-                    'class' => 'yii\rest\UrlRule', 
-                    'controller' => 'v1/feedbacks',
-                    'tokens' => [
-                        '{id}' => '<id:\\w+>'
-                    ]
-                ],
-                [
-                    'class' => 'yii\rest\UrlRule', 
-                    'controller' => 'v1/dev-works',
-                    'tokens' => [
-                        '{id}' => '<id:\\w+>'
-                    ],
-                    'extraPatterns' => [
-                        'GET latest' => 'getlatestnews',
-                    ]
-                ],
-                [
-                    'class' => 'yii\rest\UrlRule', 
-                    'controller' => 'v1/constituencies',
-                    'tokens' => [
-                        '{id}' => '<id:\\w+>'
-                    ]
-                ],
-                [
-                    'class' => 'yii\rest\UrlRule', 
-                    'controller' => 'v1/messages',
-                    'tokens' => [
-                        '{id}' => '<id:\\w+>'
-                    ],
-                    'extraPatterns' => [
-                        'GET latest' => 'getlatestmessages',
-                    ]
-                ],
-                [
-                    'class' => 'yii\rest\UrlRule', 
-                    'controller' => 'v1/paper-cuttings',
-                    'tokens' => [
-                        '{id}' => '<id:\\w+>'
-                    ]
-                ],
-                [
-                    'class' => 'yii\rest\UrlRule', 
-                    'controller' => 'v1/img-gals',
-                    'tokens' => [
-                        '{id}' => '<id:\\w+>'
-                    ],
-                    'extraPatterns' => [
-                        'GET images' => 'getimages',
+                        'POST save-order' => 'new-order', 
+                        'POST update-order' => 'update-order-status', 
+                        'POST all-orders' => 'all-orders', 
+                        'POST get-order-by-id' => 'get-order-by-id', 
                     ]
                 ],
             ],

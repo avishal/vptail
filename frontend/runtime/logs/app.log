@@ -125,3 +125,79 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1505477034.069
     'REQUEST_TIME' => 1505477034
 ]
+2018-05-02 08:22:25 [::1][-][8qqjl8a08pssn9l5up6ai5pah5][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'common\models\LoginForm' not found' in E:\xampp\htdocs\tailor\frontend\controllers\SiteController.php:89
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2018-05-02 08:22:25 [::1][-][8qqjl8a08pssn9l5up6ai5pah5][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    'Tawk_593fdcc2b3d02e11ecc69af3' => 'vs31.tawk.to::0'
+    'private_content_version' => '9cdc96853dd2687471519199a318fe39'
+    'mage-messages' => '[{\"type\":\"error\",\"text\":\"A login and a password are required.\"}]'
+    '__tawkuuid' => 'e::localhost::TRKzhLzt6nEv9BFuKH0jl6cYKyR3RqzvSd1bpxZHQgL3Ec0ZIbYNvrjLXy95xFGp::2'
+    'CakeCookie' => [
+        'cat_view' => '[\"19\",\"35\",\"560\",\"575\"]'
+    ]
+    'Tawk_5ac844094b401e45400e6c9d' => 'vs5.tawk.to::0'
+    'advanced-backend' => 'pbemab7tfql3qq662o8bjghpd2'
+    '_csrf-backend' => 'bac5e85327492ff9173d67b25eabc88cf32b2cc1440ed36e4db4538989eeb847a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"piNfpfOKVezriyEfhuPaXjh2T42hhiHw\";}'
+    'tailor-backend' => '0lhafkdsa3vrdc7gb5i5fr78i5'
+    '_identity-backend' => '1957dc0180042f41df71dedb5554f657690d5a68e8eeb104ab2256fb29537e09a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"1tGoXobzqYNysDu-X-TRF3HF6JBYvz3D\",2592000]\";}'
+    'advanced-frontend' => '8qqjl8a08pssn9l5up6ai5pah5'
+    '_csrf-frontend' => '4647f4c97ba4ad785ef0e9c1ab18bf42e7bf9283286b0f67ae4fa756c85bb987a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"AkEu_0be1GJZqgrjWq590Bhqc5n89UcM\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'ckjita'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8080/tailor/frontend/web/index.php?r=site%2Fsignup'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'Tawk_593fdcc2b3d02e11ecc69af3=vs31.tawk.to::0; private_content_version=9cdc96853dd2687471519199a318fe39; mage-messages=%5B%7B%22type%22%3A%22error%22%2C%22text%22%3A%22A+login+and+a+password+are+required.%22%7D%5D; __tawkuuid=e::localhost::TRKzhLzt6nEv9BFuKH0jl6cYKyR3RqzvSd1bpxZHQgL3Ec0ZIbYNvrjLXy95xFGp::2; CakeCookie[cat_view]=%5B%2219%22%2C%2235%22%2C%22560%22%2C%22575%22%5D; Tawk_5ac844094b401e45400e6c9d=vs5.tawk.to::0; advanced-backend=pbemab7tfql3qq662o8bjghpd2; _csrf-backend=bac5e85327492ff9173d67b25eabc88cf32b2cc1440ed36e4db4538989eeb847a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22piNfpfOKVezriyEfhuPaXjh2T42hhiHw%22%3B%7D; tailor-backend=0lhafkdsa3vrdc7gb5i5fr78i5; _identity-backend=1957dc0180042f41df71dedb5554f657690d5a68e8eeb104ab2256fb29537e09a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%221tGoXobzqYNysDu-X-TRF3HF6JBYvz3D%22%2C2592000%5D%22%3B%7D; advanced-frontend=8qqjl8a08pssn9l5up6ai5pah5; _csrf-frontend=4647f4c97ba4ad785ef0e9c1ab18bf42e7bf9283286b0f67ae4fa756c85bb987a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22AkEu_0be1GJZqgrjWq590Bhqc5n89UcM%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;E:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Java\\jdk1.8.0_151\\bin\\;C:\\Users\\conversant\\AppData\\Local\\Android\\Sdk\\tools\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\bin\\git.exe;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\conversant\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\conversant\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\Java\\jdk1.8.0_151\\bin;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\bin\\git.exe;E:\\xampp\\htdocs\\VMR\\app\\Console;C:\\Users\\conversant\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.15 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.15'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/xampp/htdocs/tailor/frontend/web/index.php'
+    'REMOTE_PORT' => '58023'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/tailor/frontend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/tailor/frontend/web/index.php'
+    'PHP_SELF' => '/tailor/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1525242145.543
+    'REQUEST_TIME' => 1525242145
+]

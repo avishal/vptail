@@ -11,6 +11,13 @@ return [
             'authkey' => 'AAAAJHw-LAs:APA91bGGNFJ7okolC4wR4mo-v8n4gee-6I80RDVb6IIPIdT0hdb6fW6J4tFpnBNSgR81A1eC7soVq7O83wKHeNygeBDgPLZ7KpJ7gxxqPCgWh7LzSu5HzPcMC1u0lTGl21MlgZTw4IJM_7yURi56Xr5ggpHD-AN3-A',
         ],
 
+        /*'db' => [
+            'class' => 'yii\db\Connection',
+            'dsn' => 'mysql:host=localhost;dbname=tailor',
+            'username' => 'root',
+            'password' => '',
+            'charset' => 'utf8',
+        ],*/
         'db' => [
             'class' => 'yii\db\Connection',
             'dsn' => 'mysql:host=localhost;dbname=tailor',

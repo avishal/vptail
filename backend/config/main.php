@@ -8,7 +8,7 @@ $params = array_merge(
 
 return [
     'timeZone'=>'Asia/Kolkata',
-    'name' =>"Elearn",
+    'name' =>"Tailor",
     'id' => 'app-backend',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
@@ -35,7 +35,7 @@ return [
         ],
         'session' => [
             // this is the name of the session cookie used for login on the backend
-            'name' => 'elearn-backend',
+            'name' => 'tailor-backend',
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,

@@ -69,4 +69,12 @@ class TailorCustomers extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Customers::className(), ['id' => 'customerid']);
     }
+
+    public function beforeSave($insert) {
+        if ($this->isNewRecord)
+            $this->created = $this->updated = date("Y-m-d H:i:s", time());
+        else
+            $this->updated = date("Y-m-d H:i:s", time());
+        return parent::beforeSave($insert);
+    }
 }

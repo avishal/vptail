@@ -20,6 +20,9 @@ use Yii;
  */
 class Customers extends \yii\db\ActiveRecord
 {
+    const ACTIVE_STATUS = 10;
+    const INACTIVE_STATUS = 0;
+    const DELETED_STATUS = 2;
     /**
      * @inheritdoc
      */
@@ -34,8 +37,9 @@ class Customers extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['firstname', 'lastname', 'email', 'mobile', 'created', 'updated'], 'required'],
+            [['firstname', 'lastname', 'email', 'mobile'], 'required'],
             [['status'], 'integer'],
+            ['email','email'],
             [['password'], 'string'],
             [['created', 'updated'], 'safe'],
             [['firstname', 'lastname', 'email'], 'string', 'max' => 50],
@@ -61,5 +65,23 @@ class Customers extends \yii\db\ActiveRecord
             'created' => 'Created',
             'updated' => 'Updated',
         ];
+    }
+
+    public function getTailorCustomer()
+    {
+        return $this->hasOne(TailorCustomers::className(), ['tailorid' => 'id']);
+    }
+
+    public function getTailorWorker()
+    {
+        return $this->hasOne(TailorCustomers::className(), ['tailorid' => 'tailorid'])->viaTable('tailor_workers', ['tailorid' => 'id']);
+    }
+
+    public function beforeSave($insert) {
+        if ($this->isNewRecord)
+            $this->created = $this->updated = date("Y-m-d H:i:s", time());
+        else
+            $this->updated = date("Y-m-d H:i:s", time());
+        return parent::beforeSave($insert);
     }
 }
